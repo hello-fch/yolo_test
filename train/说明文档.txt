@@ -1,0 +1,16 @@
+1、tray_seg.yaml文件里面，修改path为自己的数据集
+2、tray_seg.yaml文件里面，修改类别信息names，排序依据为，数组下标：name（name是使用roboflow导出的数据集文件夹里面data.yaml里面的names数组对应下标的内容）。
+	例如：data.ymal里面为names: ['fox']；
+	则tray_seg.yaml文件中类别信息names为：
+		names:
+			0: fox
+
+3、split_dataset.py数据分割，注意以下三个路径（基本不用修改）：
+    parser.add_argument("--image_dir", type=str, default="train/images", help="原始图像目录路径")
+    parser.add_argument("--label_dir", type=str, default="train/labels", help="原始标签目录路径")
+    parser.add_argument("--output_dir", type=str, default="train/dataset", help="输出目录路径")
+	
+4、export.py将模型转为onnx使用，注意修改选用的模型路径和导出的地址
+
+
+如果使用的是自定义训练入口，则上面修改内容都在自定义入口中
