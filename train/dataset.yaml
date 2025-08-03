@@ -1,7 +1,0 @@
-path: E:/其他/Python/测试yolo训练和使用/train/train/dataset
-train: images/train
-val: images/val
-names:
-  0: tray
-  1: package
-colors: [[0, 0, 255], [255, 0, 0]]

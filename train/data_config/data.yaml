@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['fox']
+
+roboflow:
+  workspace: test-onk4v
+  project: my-first-project-nelkd
+  version: 2
+  license: Private
+  url: https://app.roboflow.com/test-onk4v/my-first-project-nelkd/2
